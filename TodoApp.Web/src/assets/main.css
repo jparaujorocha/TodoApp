@@ -1,0 +1,204 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    background-color: #f4f4f4;
+  }
+  
+  #app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #35495e;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.8em;
+  }
+  
+  nav {
+    padding: 10px;
+  }
+  
+  nav a {
+    font-weight: bold;
+    color: #e0e0e0;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  nav a.router-link-exact-active {
+    color: #42b983; /* Vue green */
+  }
+  
+  main {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    background-color: #35495e;
+    color: #e0e0e0;
+    font-size: 0.9em;
+  }
+  
+  button {
+    background-color: #42b983;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #36a46e;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="datetime-local"],
+  textarea,
+  select {
+    width: 100%; /* Use 100% width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+  }
+  
+  
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .error-message {
+      color: #d9534f; /* Red */
+      background-color: #f2dede;
+      border: 1px solid #ebccd1;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 15px;
+      font-weight: bold;
+       display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .error-message p {
+      margin: 0;
+      flex-grow: 1;
+      margin-right: 10px;
+  }
+  
+  .error-message button {
+      padding: 3px 8px;
+      font-size: 0.8em;
+      background-color: transparent;
+      color: #d9534f;
+      border: 1px solid #d9534f;
+      cursor: pointer;
+      border-radius: 3px;
+  }
+  .error-message button:hover {
+      background-color: #f2dede;
+      opacity: 0.8;
+  }
+  
+  label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      font-size: 0.9em;
+      color: #333;
+      margin-top: 10px;
+  }
+  
+  /* Modal Styles (Consider moving to a dedicated modal component later) */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    min-width: 350px;
+    max-width: 500px;
+    width: 90%; /* Responsive width */
+  }
+  
+  .modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #35495e;
+    text-align: center;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .cancel-button {
+      background-color: #6c757d; /* Grey */
+  }
+  
+  .cancel-button:hover {
+      background-color: #5a6268;
+  }
+  
+  /* Style disabled inputs/selects */
+  input:disabled, select:disabled, textarea:disabled {
+      background-color: #e9ecef;
+      cursor: not-allowed;
+      opacity: 0.7;
+  }
+  
+  .loading-indicator {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-style: italic;
+  }

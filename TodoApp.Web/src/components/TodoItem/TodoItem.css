@@ -1,0 +1,132 @@
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+  }
+  
+  .todo-item:hover {
+      background-color: #f9f9f9;
+  }
+  
+  .item-content {
+    flex-grow: 1;
+    margin-right: 15px;
+  }
+  
+  .item-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #35495e;
+  }
+  
+  .category-tag {
+      font-size: 0.85em;
+      color: #555;
+      font-weight: normal;
+      margin-left: 5px;
+  }
+  
+  .description {
+      font-size: 0.95em;
+      color: #666;
+      margin: 5px 0 10px 0;
+      white-space: pre-wrap;
+  }
+  
+  .no-progress {
+      font-style: italic;
+      color: #888;
+      font-size: 0.9em;
+      margin-top: 10px;
+  }
+  
+  .progress-section {
+      margin-top: 10px;
+  }
+  
+  .progress-details {
+      margin-top: 8px;
+      font-size: 0.9em;
+  }
+  
+  .progress-details summary {
+      cursor: pointer;
+      font-weight: 500;
+      color: #42b983;
+      display: inline-block;
+      padding: 2px 0;
+  }
+  .progress-details summary:hover {
+      text-decoration: underline;
+  }
+  
+  .progress-details ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 5px;
+      max-height: 150px;
+      overflow-y: auto;
+      border-top: 1px solid #eee;
+      padding-top: 5px;
+  }
+  
+  .progress-entry {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 8px;
+      padding: 4px 0;
+  }
+  
+  .progress-date {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 3px;
+  }
+  
+  .progress-percent {
+      color: #42b983;
+      font-weight: bold;
+      margin-left: 5px;
+  }
+  
+  
+  .item-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+    padding-top: 5px;
+  }
+  
+  .item-actions button {
+    padding: 5px 8px;
+    font-size: 1.1em;
+    min-width: 40px;
+    text-align: center;
+    line-height: 1;
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #ced4da;
+  }
+  .item-actions button:hover:not(:disabled) {
+      background-color: #e2e6ea;
+      border-color: #adb5bd;
+  }
+  
+  .item-actions button:disabled {
+      background-color: #e9ecef;
+      color: #adb5bd;
+      border-color: #ced4da;
+  }
+  
+  .todo-item.completed .item-content h3 {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  .todo-item.completed .description {
+    color: #bbb;
+  }
