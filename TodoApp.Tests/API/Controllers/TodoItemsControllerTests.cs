@@ -88,7 +88,7 @@ namespace TodoApp.Tests.API.Controllers
             var result = _controller.GetItemById(id);
 
             // Assert
-            Assert.That(result, Is.InstanceOf<NotFoundObjectResult>());
+            Assert.That(result, Is.InstanceOf<NoContentResult>());
         }
 
         [Test]
@@ -210,7 +210,7 @@ namespace TodoApp.Tests.API.Controllers
             var result = _controller.UpdateItem(id, request);
 
             // Assert
-            Assert.That(result, Is.InstanceOf<NotFoundObjectResult>());
+            Assert.That(result, Is.InstanceOf<NoContentResult>());
         }
 
         [Test]
@@ -262,7 +262,7 @@ namespace TodoApp.Tests.API.Controllers
             var result = _controller.RemoveItem(id);
 
             // Assert
-            Assert.That(result, Is.InstanceOf<NotFoundObjectResult>());
+            Assert.That(result, Is.InstanceOf<NoContentResult>());
         }
 
         [Test]
@@ -336,7 +336,7 @@ namespace TodoApp.Tests.API.Controllers
             var result = _controller.RegisterProgression(id, request);
 
             // Assert
-            Assert.That(result, Is.InstanceOf<NotFoundObjectResult>());
+            Assert.That(result, Is.InstanceOf<NoContentResult>());
         }
 
         [Test]
